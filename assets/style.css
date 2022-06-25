@@ -1,0 +1,66 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(237, 246, 247);
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: #011c37;
+  color: #15DEA5;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.form__group {
+  color: #6300a0;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.form__group label {
+  padding: 0.2rem 1.5rem;
+}
+.form__group input {
+  border: 1px solid #fff;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+  outline: none;
+  padding: 0.5rem 1.2rem;
+  width: 100%;
+  transition: background-color 500ms;
+}
+.form__group input:focus {
+  border: 1px solid #6300a0;
+}
+.form__group input:not(:focus):invalid {
+  background-color: #b20a37;
+  border: 1px solid #b20a37;
+  color: #fff;
+}
+
+.btn-ball:active + .ball {
+  transform: scale(2);
+}
+
+.ball {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  margin: 4rem auto 3rem;
+  background: #13D393;
+  transform: scale(0.1);
+  transition: transform 0.4s ease-out;
+}/*# sourceMappingURL=style.css.map */
