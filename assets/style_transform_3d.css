@@ -1,0 +1,82 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(237, 246, 247);
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: #011c37;
+  color: #15DEA5;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+.btn:hover + .skew .box--skewX {
+  transform: skewX(45deg);
+}
+.btn:hover + .skew .box--skewY {
+  transform: skewY(45deg);
+}
+.btn:hover + .skew .box--skewXY {
+  transform: skew(44deg, 44deg);
+}
+.btn:hover + .skew + .perspective .box--translateZ {
+  transform: perspective(150px) translateZ(60px);
+}
+.btn:hover + .skew + .perspective .box--translate3d {
+  transform: perspective(150px) translate3d(150%, -10%, 50px);
+}
+.btn:hover + .skew + .perspective .box--translate-rotate--1 {
+  transform: perspective(150px) rotateX(75deg);
+}
+.btn:hover + .skew + .perspective .box--translate-rotate--2 {
+  transform: perspective(150px) rotateY(75deg);
+}
+.btn:hover + .skew + .perspective .box--translate-rotate--3 {
+  transform: perspective(150px) rotateX(45deg);
+}
+.btn:hover + .skew + .perspective .box--translate-rotate--4 {
+  transform: perspective(150px) rotate3d(-1, 0.5, -0.75, -75deg);
+}
+
+.box {
+  display: inline-block;
+  height: 10rem;
+  width: 2.5rem;
+  background-color: #13D393;
+  margin: 4rem 5rem 2rem;
+}
+.box--skewX {
+  transition: transform 0.3s ease-in-out;
+}
+.box--skewY {
+  transition: transform 0.3s ease-in-out;
+}
+.box--skewXY {
+  transition: transform 0.3s ease-in-out;
+}
+.box--translateZ {
+  transition: transform 0.3s ease-in-out;
+}
+.box--translate3d {
+  transition: transform 0.3s ease-in-out;
+}
+.box--translate-rotate--1 {
+  transition: transform 0.3s ease-in-out;
+}
+.box--translate-rotate--2 {
+  transition: transform 0.3s ease-in-out;
+}
+.box--translate-rotate--3 {
+  transition: transform 0.3s ease-in-out;
+}
+.box--translate-rotate--4 {
+  transition: transform 0.3s ease-in-out;
+}/*# sourceMappingURL=style_transform_3d.css.map */

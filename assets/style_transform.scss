@@ -1,0 +1,101 @@
+// Boutons
+$cd-btn: #011c37;
+$cd-txt-btn: #15DEA5;
+// Ball
+$box-size: 5rem;
+$box-secondary: #13D393;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(237, 246, 247);
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: $cd-btn;
+  color: $cd-txt-btn;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  &:hover + .box--scale{ // juxtaposition d'éléments : le + pour descendre dans l'arbre des éléments du container
+    transform: scale(3, 0.5);
+    & + .box--translate{
+      // transform: translate(150px, -7vh);
+      transform: translateX(100%);
+      & + .box--text{
+        transform: scale(1);
+        & span{
+          transform: translateY(0);
+        }
+        & + .boxes {
+          & > .box--rotate--deg{
+            background-color: pink;
+            transform: rotate(360deg);
+          }
+          & > .box--rotate--turn{
+            background-color: cyan;
+            transform: rotate(-1turn);
+          }
+          & + .box--transforms{
+            transform: scale(1) rotate(0deg);
+            & span{
+              transform: translateY(200%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.box{
+  height: $box-size;
+  width: $box-size;
+  background-color: $box-secondary;
+  margin: 4rem auto 2rem;
+  &--scale{
+    transition: transform .3s ease-in-out;
+  }
+  &--translate{
+    transition: transform .3s ease-in-out;
+  }
+  &--text{
+    color: #fff;
+    transform: scale(.1);
+    transition: transform .3s ease-in-out;
+    overflow: hidden;
+    & span{
+      display: inline-block; // transform ne peut pas manipuler d'objets inline
+      transform: translateY(-250%);
+      transition: transform .3s ease-in-out .5s; // décomposition de l'aim en deux temps
+    }
+  }
+  &--rotate{
+    display: inline-block;
+    line-height: 1.5*$box-size; // centrage du text dans la div
+    height: 1.5*$box-size;
+    width: 1.5*$box-size;
+    font-size: 1rem;
+    text-align: center;
+    transform: rotate(0deg);
+    transition: transform 500ms ease-in-out;
+    &:first-of-type{
+      margin-right: 4rem;
+    }
+  }
+  &--transforms{
+    color: #fff;
+    overflow: hidden;
+    transform: scale(.1) rotate(90deg);
+    transition: transform 400ms ease-in-out;
+    & span{
+      display: inline-block; // transform ne peut pas manipuler d'objets inline
+      transform: translateY(-250%);
+      transition: transform .3s ease-in-out .5s; // décomposition de l'aim en deux temps
+    }
+  }
+}

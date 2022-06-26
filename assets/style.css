@@ -63,4 +63,14 @@ body {
   background: #13D393;
   transform: scale(0.1);
   transition: transform 0.4s ease-out;
+}
+
+.btn-complex {
+  background-color: rgba(1, 28, 55, 0);
+  border: 2px solid #011c37;
+  transition: transform 0.45s, background-color 0.3s 0.15s;
+}
+.btn-complex:hover {
+  transform: scale(1.1);
+  background-color: rgb(1, 28, 55);
 }/*# sourceMappingURL=style.css.map */

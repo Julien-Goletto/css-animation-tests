@@ -1,0 +1,90 @@
+// Boutons
+$cd-btn: #011c37;
+$cd-txt-btn: #15DEA5;
+// Ball
+$box-size: 5rem;
+$box-secondary: #13D393;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(237, 246, 247);
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: $cd-btn;
+  color: $cd-txt-btn;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  &:hover + .skew {
+    & .box--skewX{
+      transform: skewX(45deg);
+    }
+    & .box--skewY{
+      transform: skewY(45deg);
+    }
+    & .box--skewXY{
+      transform: skew(44deg, 44deg);
+    }
+    & + .perspective{
+      & .box--translateZ{
+        transform: perspective(150px) translateZ(60px);
+      }
+      & .box--translate3d{
+        transform: perspective(150px) translate3d(150%, -10%, 50px);
+      }
+      & .box--translate-rotate--1{
+        transform: perspective(150px) rotateX(75deg);
+      }
+      & .box--translate-rotate--2{
+        transform: perspective(150px) rotateY(75deg);
+      }
+      & .box--translate-rotate--3{
+        transform: perspective(150px) rotateX(45deg);
+      }
+      & .box--translate-rotate--4{
+        transform: perspective(150px) rotate3d(-1, .5, -.75, -75deg);
+      }
+    }
+  }
+}
+.box{
+  display: inline-block;
+  height: 2*$box-size;
+  width: .5*$box-size;
+  background-color: $box-secondary;
+  margin: 4rem $box-size 2rem;
+  &--skewX{
+    transition: transform .3s ease-in-out;
+  }
+  &--skewY{
+    transition: transform .3s ease-in-out;
+  }
+  &--skewXY{
+    transition: transform .3s ease-in-out;
+  }
+  &--translateZ{
+    transition: transform .3s ease-in-out;
+  }
+  &--translate3d{
+    transition: transform .3s ease-in-out;
+  }
+  &--translate-rotate--1{
+    transition: transform .3s ease-in-out;
+  }
+  &--translate-rotate--2{
+    transition: transform .3s ease-in-out;
+  }
+  &--translate-rotate--3{
+    transition: transform .3s ease-in-out;
+  }
+  &--translate-rotate--4{
+    transition: transform .3s ease-in-out;
+  }
+}
